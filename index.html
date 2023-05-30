@@ -5,20 +5,144 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About Me</title>
-        <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADZCAMAAAAdUYxCAAAAjVBMVEX+/v7//////wD//x3//w///zb//yT//0H//y///0j//xn//2///1P//z3//zD//1b//3r//2j//4H//4z//2H//2v//6X//4///2P//57//3T//07//2n//5b//8z//4T//6z//7b//8L//+n//6///9r//7n//87//97//77//+X//9T///D//+////ddT9p4AAAQaElEQVR4nO2d15bjrBKF+3fOsZ1zzn7/xzskIUKBJFuCtufU5Yzt1re22CqgKP38/D8yi93B9xU4il7b9xW4iXsu929Iusrl/glJn7lC4Z+QtI9Bx76vIvvAgiLSq+/ryDyQoDUEOvV9HVkHstxCrfYPSIoFzWPQuu8ryTaIoHlEmvtySYmgpe+XFFsuAqWk3ywpFbRCQb/YeJmglVKJGO/O9/VkFj0qaItJ2vF9PVnFjgnaopLmvlbSQNBiIGnP9xVlE7scBS0Wi98taSBos/ndkj7YCC02y0RSkh49fF9VBsFHaLn81ZLeQ0Gr5XCU3n1fV+qx4oJWq4KkK9/XlXYII3Q2Q5K2vlXScIRWMWgo6cj3laUbj+AZikZoozGrNr9VUlHQduN7JZUEbbcbVVHSp++rSzEkQX+/V1LBcpGgv79fK2lHEnSsSrrwfX1phSJod/ytkiqCDrpfOkp3iqD1uSpp4TskVQWt65JOfF9jGqEJOv1SSafBwgITdNqZfqWkRNCSKGgHkDTn+zLfD3WETju9r5RUfYbWCegXStrTBV3Jkpa+QlLdcjurlS5p4eMl7WiW21v1YUnXvq/1nSCL87Llrvp9WNKS74t9JyBBRyODpHvfV/t6XPVn6Kq/WIiSCk+Ygu/LfT0GkKCLhUnSte/rfTWApAgLapT0Y413CjxDR4vJJJCULzVUPnuUGkbocCJKKuWBNd+X/FrUwRE6GQ4n2ij9aEkNghJQJmlXlbTo+6JfCZOgay5pXZf06Puqk4dR0P3aImnF92UnD6Og+71tlH6cpGZBN1ZJPy7j1VeKmKCb44ZLOgWepR8mqZAUzRRBL7Kkv58tqUXQiyzpZ4/Sq0XQbYSkH/UsnZsF3W6jJN36vvr4cTZb7mW7DCQdGSQt+778+DG2CLpcypIC6dHHSHrWRmhPEPQUKWnTN0Dc6NoE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">
+        <title>Personal Portfolio</title>
+        <link rel="icon" href="images/NH.png">
         <link rel="stylesheet" href="style.css"> 
+        <script src="https://kit.fontawesome.com/62eee5844a.js" crossorigin="anonymous"></script>
     </head>
    
     <body>
-        <nav id="navbar">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/NH.png" class="logo">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Coursework</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <!--<p>Undergraduate at UC Berkeley</p>-->
+                    <h1>Hello! I'm <span>Nicole</span>. I'm a senior studying <br> computer science at UC Berkeley.</h1>
+                </div>
+            </div>
+        </div>
+        <!--about-->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/1685420347940.jpg">
+                    </div>
+                    <div class="about-col-2">
+            
+                        <h1 class="sub-title"><i class="fa-solid fa-user"></i> About me</h1>
+                        <p> <br>I spent my childhood in Indonesia and China before coming to the U.S.. 
+                            I came to attend De Anza College in 2020 and then transferred to UC Berkeley in 2022
+                            to pursue B.A. in Computer Science. I am passionate about software engineering, 
+                            computer security, machine learning, and artificial intelligence. In my free time, 
+                            I like playing music (piano/guitar), playing basketball, traveling, and sometimes 
+                            attempting Kaggle challenges.
+                        </p> <br>
+                        <p>I look forward to further exploring tech and meeting new friends. 
+                            Feel free to contact me about anything!</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Back-end </span><br>Python, C++, Java, SQL</li>
+                                <li><span>Front-end </span><br>HTML, CSS, JavaScript, React</li>
+                                <li><span>Basic Exploratory Data Analysis</span><br></li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Jan 2023 - May 2023 </span><br>COMPSCI 61A Academic Intern<br>Assisted students with their questions on homework, debugging, and projects during office hours</li>
+                                <li><span>Feb 2021 - Jun 2022 </span><br>Officer at College Leap at De Anza <br>Organized & hosted monthly career expos, including reaching out to speakers and startups</li>
+        
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>University of California, Berkeley <br>Computer Science B.A.</span><br> Aug 2022 - May 2024</li>
+                                <li><span>De Anza College <br> Computer Science Associate for Transfer</span><br> Jan 2020 - Jun 2022</li>
+                        
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Coursework-->
+        <div id="coursework">
+            <div class="container">
+                <h1 class="sub-title"><i class="fa-solid fa-school"></i> My coursework</h1>
+                <div class="course-list">
+                    <div>
+                        <h2>Fall 2022</h2>
+                        <ul>
+                            <li>COMPSCI 61A <br> Structure and Interpretation of Computer Programs</li>
+                            <li>COMPSCI 70 <br> Discrete Mathematics and Probability Theory</li>
+                            <li>DATA 8 <br> The Foundations of Data Science</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>Spring 2023</h2>
+                        <ul>
+                            <li>COMPSCI 61B <br> Data Structures</li>
+                            <li>DATA 100 <br> Principles and Techniques of Data Science</li>
+                            <li>EECS 126 <br> Probability and Random Processes</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>Summer 2023</h2>
+                        <ul>
+                            <li>COMPSCI 61C <br> Great Ideas in Computer Architecture (Machine Structures)</li>
+        
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>Fall 2023</h2>
+                        <ul>
+                            <li>EECS 127 <br>Optimization Models in Engineering</li>
+                            <li>COMPSCI 161 <br>Computer Security</li>
+                            <li>COMPSCI 162 <br>Operating systems and System Programming</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>Spring 2024</h2>
+                        <ul>
+                            <li>coming soon <br></li>
+        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname) {
+                for(tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+
+        </script>
 
     </body>
 </html>
