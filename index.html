@@ -16,13 +16,15 @@
             <div class="container">
                 <nav>
                     <img src="images/NH.png" class="logo">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Coursework</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Contact</a></li>
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#coursework">Coursework</a></li>
+                        <li><a href="#project">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                     </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
                 </nav>
                 <div class="header-text">
                     <!--<p>Undergraduate at UC Berkeley</p>-->
@@ -40,14 +42,15 @@
                     <div class="about-col-2">
             
                         <h1 class="sub-title"><i class="fa-solid fa-user"></i> About me</h1>
-                        <p> <br>I spent my childhood in Indonesia and China before coming to the U.S.. 
+                        <p> <br>I had spent my childhood years in Indonesia and China before coming to the U.S.. 
                             I came to attend De Anza College in 2020 and then transferred to UC Berkeley in 2022
-                            to pursue B.A. in Computer Science. I am passionate about software engineering, 
-                            computer security, machine learning, and artificial intelligence. In my free time, 
+                            to pursue B.A. in Computer Science. I am passionate about 
+                            software engineering, computer security, machine learning, and artificial intelligence. 
+                            In my free time, 
                             I like playing music (piano/guitar), playing basketball, traveling, and sometimes 
                             attempting Kaggle challenges.
                         </p> <br>
-                        <p>I look forward to further exploring tech and meeting new friends. 
+                        <p>I am excited to further explore tech and meet new friends. 
                             Feel free to contact me about anything!</p>
                         <div class="tab-titles">
                             <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -84,7 +87,7 @@
         <!--Coursework-->
         <div id="coursework">
             <div class="container">
-                <h1 class="sub-title"><i class="fa-solid fa-school"></i> My coursework</h1>
+                <h1 class="sub-title"><i class="fa-solid fa-school"></i> My Coursework</h1>
                 <div class="course-list">
                     <div>
                         <h2>Fall 2022</h2>
@@ -127,6 +130,75 @@
                 </div>
             </div>
         </div>
+        <!--projects-->
+        <div id="project">
+            <div class="container">
+                <h1 class="sub-title"><i class="fa-solid fa-code"></i> My Projects </h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/game.png">
+                        <div class="layer">
+                            <h3><br>CS 61B: The Game</h3>
+                            <p>This is a game similar to Pac-Man, in which the player need to collect as many points 
+                                in within a limited time period. It's written in Java.</p>
+                            <a href="#">Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/download.png">
+                        <div class="layer">
+                            <h3><br>?</h3>
+                            <p>?</p>
+                            <a href="#">Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/download.png">
+                        <div class="layer">
+                            <h3><br>?</h3>
+                            <p>?</p>
+                            <a href="#">Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://github.com/N1cole88" class="btn">See more on Github <i class="fa-brands fa-github"></i></a>
+                <a href="https://www.kaggle.com/nicole12h" class="btn">See more on Kaggle <i class="fa-brands fa-kaggle"></i></a>
+            </div>
+        </div>
+        <!--------contact------->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title"> <i class="fa-solid fa-paper-plane"></i> Contact Me </h1>
+                        <p><i class="fa-solid fa-envelope"></i>  nicole33how@berkeley.edu</p>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/nicol33_h/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/nicole-howard-6876361b4/"><i class="fa-brands fa-linkedin"></i></a>
+                    
+                        </div>
+                        <a href="images/Resume_NicoleH (3).pdf" download class="btn btn2">Download Resume</a>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+            <!--
+                <div class="copyright">
+                <p>Made with Nicole <i class="fa-solid fa-heart"></i></p>
+            </div>
+            -->
+
+        </div>
+
+
         <script>
             var tablinks = document.getElementsByClassName("tab-links");
             var tabcontents = document.getElementsByClassName("tab-contents");
@@ -142,6 +214,37 @@
                 document.getElementById(tabname).classList.add("active-tab");
             }
 
+
+        </script>
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+
+            function openmenu(){
+                sidemenu.style.right = "0";
+            }
+
+            function closemenu(){
+                sidemenu.style.right = "-200px";
+            }
+        </script>
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyrpGTYD4zSu3GniKyEcNO4rXbIBAiKvAgEv-0XgV_yrjBOrYwoeNI3dQwmZ44jfqX8fg/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+            
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, {method: 'POST', body: new FormData(form)})
+                    .then(response => {
+                        msg.innerHTML = "Message was sent successfully. Thank you!"
+                        setTimeout(function() {
+                            msg.innerHTML = ""
+                        }, 5000)
+                        form.reset()
+                    })
+                    .catch(error => console.error('Error!', error.message));
+            })
         </script>
 
     </body>
